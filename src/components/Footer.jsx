@@ -53,9 +53,9 @@ export default function Footer() {
             {/* Social Links */}
             <div style={{ display: 'flex', gap: '0.8rem', marginTop: '1.5rem' }}>
               {[
-                { label: 'IG', href: '#' },
-                { label: 'TT', href: '#' },
-                { label: 'FB', href: '#' },
+                { label: 'IG', href: 'https://www.facebook.com/lailas.treasures/' },
+                { label: 'TT', href: 'https://www.tiktok.com/@lailastreasures' },
+                { label: 'FB', href: 'https://www.instagram.com/treasures_hattiesburg/' },
               ].map(({ label, href }) => (
                 <a key={label} href={href} style={{
                   width: '2rem',
