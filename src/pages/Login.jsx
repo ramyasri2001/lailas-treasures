@@ -219,7 +219,37 @@ export default function Login() {
             </button>
           </form>
         </div>
-
+        {/* Forgot Password */}
+        <div style={{ textAlign: 'right', marginTop: '-0.5rem', marginBottom: '1.5rem' }}>
+          <button
+            type="button"
+            onClick={async () => {
+              if (!email) {
+                setError('Please enter your email address first.')
+                return
+              }
+              const { error } = await supabase.auth.resetPasswordForEmail(email, {
+                redirectTo: 'https://lailas-treasures.netlify.app/reset-password',
+              })
+              if (error) {
+                setError('Failed to send reset email. Please try again.')
+              } else {
+                setError('')
+                alert('Password reset email sent! Check your inbox.')
+              }
+            }}
+            style={{
+              background: 'none', border: 'none',
+              fontFamily: 'Josefin Sans, sans-serif',
+              fontSize: '0.7rem', letterSpacing: '0.1em',
+              color: '#7A7060', cursor: 'pointer',
+              transition: 'color 0.3s',
+              textDecoration: 'underline',
+            }}
+            onMouseEnter={e => e.currentTarget.style.color = '#C9A227'}
+            onMouseLeave={e => e.currentTarget.style.color = '#7A7060'}
+          >Forgot Password?</button>
+        </div>
         {/* Register Link */}
         <p style={{
           textAlign: 'center', marginTop: '1.5rem',
