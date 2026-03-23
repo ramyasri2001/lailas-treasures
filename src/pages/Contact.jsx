@@ -154,7 +154,7 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Social Links */}
+{/* Social Links */}
             <div style={{ marginTop: '2rem' }}>
               <div style={{
                 fontFamily: 'Josefin Sans, sans-serif',
@@ -163,8 +163,12 @@ export default function Contact() {
                 marginBottom: '1rem',
               }}>Follow Us</div>
               <div style={{ display: 'flex', gap: '0.8rem' }}>
-                {['Instagram', 'TikTok', 'Facebook'].map(social => (
-                  <a key={social} href="#" style={{
+                {[
+                  { name: 'Instagram', href: 'https://www.instagram.com/treasures_hattiesburg' },
+                  { name: 'TikTok', href: 'https://www.tiktok.com/@lailastreasures' },
+                  { name: 'Facebook', href: 'https://www.facebook.com/lailas.treasures' },
+                ].map(social => (
+                  <a key={social.name} href={social.href} target="_blank" rel="noreferrer" style={{
                     fontFamily: 'Josefin Sans, sans-serif',
                     fontSize: '0.65rem', letterSpacing: '0.15em',
                     textTransform: 'uppercase',
@@ -175,7 +179,7 @@ export default function Contact() {
                   }}
                     onMouseEnter={e => { e.currentTarget.style.color = '#C9A227'; e.currentTarget.style.borderColor = 'rgba(201,162,39,0.4)' }}
                     onMouseLeave={e => { e.currentTarget.style.color = '#7A7060'; e.currentTarget.style.borderColor = 'rgba(201,162,39,0.15)' }}
-                  >{social}</a>
+                  >{social.name}</a>
                 ))}
               </div>
             </div>
