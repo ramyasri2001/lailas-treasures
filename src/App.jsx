@@ -12,6 +12,7 @@ import Collection from './pages/Collection'
 import ProductDetail from './pages/ProductDetail'
 import SavedDesigns from './pages/SavedDesigns'
 import Login from './pages/Login'
+import ResetPassword from './pages/ResetPassword'
 import Register from './pages/Register'
 import Messages from './pages/Messages'
 import Contact from './pages/Contact'
@@ -108,6 +109,7 @@ export default function App() {
               <Route path="/collection" element={<Collection />} />
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/reset-password" element={<ResetPassword />} />
               <Route path="/register" element={<Register />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/about" element={<About />} />
