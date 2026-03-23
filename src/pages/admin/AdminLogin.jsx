@@ -4,8 +4,7 @@ import { supabase } from '../../lib/supabase'
 
 // ── CHANGE THESE TO YOUR ADMIN CREDENTIALS ──
 const ADMIN_EMAIL = 'admin@lailastreasures.com'
-const ADMIN_PASSWORD = 'Laila@Admin2024'
-
+const ADMIN_PASSWORD = 'NewPassword123!'
 export default function AdminLogin() {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
