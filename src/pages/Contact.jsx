@@ -126,9 +126,9 @@ export default function Contact() {
             {/* Contact Details */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
               {[
-                { icon: '📧', label: 'Email', value: 'hello@lailastreasures.com' },
-                { icon: '📱', label: 'Phone / WhatsApp', value: '+1 (555) 000-0000' },
-                { icon: '🕐', label: 'Hours', value: 'Mon–Fri, 10am–7pm' },
+                { icon: '📧', label: 'Email', value: 'lailastreasureshattiesburg@gmail.com' },
+                { icon: '📱', label: 'Phone', value: '+1 (601) 466 6788' },
+                { icon: '🕐', label: 'Hours', value: 'Mon–Sat, 10am–8pm Sun, 12pm-6pm' },
                 { icon: '📍', label: 'Location', value: 'Custom Orders — Shipped Worldwide' },
               ].map(({ icon, label, value }) => (
                 <div key={label} style={{
